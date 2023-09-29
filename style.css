@@ -56,6 +56,10 @@ body {
   border: none;
   outline: none;
   border-bottom: 2px solid #fff;
+  padding-right: 23px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
   transition: 0.5s;
 }
 
@@ -86,10 +90,17 @@ body {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s;
 }
 
-.input-box input:focus,
-.input-box input:valid .button {
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+  color: #0ef;
+}
+
+.button {
   position: relative;
   width: 100%;
   height: 45px;
@@ -101,6 +112,24 @@ body {
   font-size: 16px;
   color: #fff;
   font-weight: 600;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background: linear-gradient(#081b29, #0ef, #081b29, #0ef);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.button:hover:before {
+  top: 0;
 }
 
 .form-box .logreg-link {
@@ -118,4 +147,18 @@ body {
 
 .logreg-link p a:hover {
   text-decoration: underline;
+}
+
+.wrapper .info-text {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .info-text.Login {
+  right: 0;
 }
