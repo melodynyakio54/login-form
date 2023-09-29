@@ -34,7 +34,6 @@ body {
 .wrapper .form-box.login {
   left: 0;
   padding: 40px;
-  flex-grow: 1;
 }
 
 .form-box h2 {
