@@ -33,7 +33,8 @@ body {
 
 .wrapper .form-box.login {
   left: 0;
-  padding: 0 40px;
+  padding: 40px;
+  flex-grow: 1;
 }
 
 .form-box h2 {
@@ -159,6 +160,6 @@ body {
   flex-direction: column;
 }
 
-.wrapper .info-text.Login {
+.wrapper .info-text.login {
   right: 0;
 }
